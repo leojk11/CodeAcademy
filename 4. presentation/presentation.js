@@ -21,7 +21,6 @@ function Presentation() {
                     var movieName = await this.business.resolvedSearchMoviesData(searchTerm);
 
                     var movieNameDiv = $("<div>").addClass("search-movie-name");
-
                     for(var i = 0; i < movieName.length; i++){
                         var movie = $("<div>").text(movieName[i].movieTitle).addClass("searched-name");
                         movieNameDiv.append(movie);
@@ -33,8 +32,6 @@ function Presentation() {
                 }
             })
         }
-
-
         body.append(headerWrapper);
         headerWrapper.append(headerInnerWrapper);
 
@@ -44,7 +41,7 @@ function Presentation() {
 
         headerInnerWrapper.append(search);
         search.append(searchInput);
-        searchInput.attr("Placeholder", "search")
+        searchInput.attr("Placeholder", "Search Movies")
     };
 
     this.mainSection = async () => {
@@ -81,12 +78,10 @@ function Presentation() {
             });
 
         });
-
+        divDesno.text("<-- CHOOSE GENRE").addClass("choose-genre-text");
         mainSecInnerWrapper.append(divDesnoWrapper);
         divDesnoWrapper.append(divDesno);
         
-        
-
         this.displayMovies = async (movieGenreId, pageNumber) => {
             var movies = await this.business.resolvedMoviesData(movieGenreId, pageNumber);
     
@@ -115,11 +110,8 @@ function Presentation() {
             moviesWrap.append(movieOverviewP);
             movieOverviewP.text(movieOverview);
             movieOverviewP.hide();
-
-
             }
         }
-
         
         var seeMoreBtn = $("<div>").addClass("see-more-btn").hide();
         var seeMoreBtnP = $("<div>").addClass("see-more-btn-p").attr("id", "1");
@@ -133,29 +125,5 @@ function Presentation() {
             pageNumber++;
             this.displayMovies(movieGenreId, pageNumber);
         });
-
-        // this.searchInput = () => {
-        //     var body =  $("body");
-        //     var input = $("<input>").addClass("nesto");
-        //     body.append(input);
-        //     input.on("keyup", async event => {
-        //         var searchTerm = $(event.target).val();
-
-        //         if(searchTerm.length > 3){
-        //             var movieName = await this.business.resolvedSearchMoviesData(searchTerm);
-
-        //             var movieNameDiv = $("<div>").addClass("name");
-
-        //             for(var i = 0; i < movieName.length; i++){
-        //                 var movie = $("<div>").text(movieName[i].movieTitle);
-        //                 movieNameDiv.append(movie);
-        //             }
-        //             search.append(movieNameDiv);
-        //         }
-        //     })
-        // }
     };
 }
-
-
-// PREPRAI GO DIVO U MAIN KAJ FILMOVITE ZA SEE MORE BUTTONOT

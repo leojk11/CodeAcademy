@@ -7,14 +7,14 @@
 
 /*GLOBAL*/
 body {
-    background-color: #47484a;
+    background-color: black;
 }
 
 
 /*HEADER*/
 .header-wrapper {
     width: 100%;
-    background-color: orange;
+    background-color: #FFD700;
     padding: 10px;
 
 }
@@ -25,13 +25,19 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.search {
+    padding: 5px;
+}
 .search-movie-name {
     position: absolute;
-    background-color: orange;
+    background-color: #FFD700;
 }
 
 
 /*MAIN*/
+.choose-genre-text {
+    color: white;
+}
 .main-sec-wrapper {
     width: 80%;
     margin: 0 auto;
@@ -44,7 +50,7 @@ body {
 }
 .see-more-btn {
     color: white;
-    background-color: orange;
+    background-color: #FFD700;
 }
 
 /*MAIN-GENRE-SECTION*/
@@ -55,7 +61,7 @@ body {
 .genre-wrap {
     padding: 10px;
     text-align: center;
-    background-color: orange;
+    background-color: #FFD700;
     margin-top: 10px;
 }
 .genre-wrap:hover {
