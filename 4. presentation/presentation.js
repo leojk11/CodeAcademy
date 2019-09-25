@@ -133,5 +133,29 @@ function Presentation() {
             pageNumber++;
             this.displayMovies(movieGenreId, pageNumber);
         });
+
+        // this.searchInput = () => {
+        //     var body =  $("body");
+        //     var input = $("<input>").addClass("nesto");
+        //     body.append(input);
+        //     input.on("keyup", async event => {
+        //         var searchTerm = $(event.target).val();
+
+        //         if(searchTerm.length > 3){
+        //             var movieName = await this.business.resolvedSearchMoviesData(searchTerm);
+
+        //             var movieNameDiv = $("<div>").addClass("name");
+
+        //             for(var i = 0; i < movieName.length; i++){
+        //                 var movie = $("<div>").text(movieName[i].movieTitle);
+        //                 movieNameDiv.append(movie);
+        //             }
+        //             search.append(movieNameDiv);
+        //         }
+        //     })
+        // }
     };
 }
+
+
+// PREPRAI GO DIVO U MAIN KAJ FILMOVITE ZA SEE MORE BUTTONOT
