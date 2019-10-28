@@ -7,7 +7,7 @@
 
 /*GLOBAL*/
 body {
-    background-color: black;
+    background-color: white;
 }
 
 
@@ -32,25 +32,23 @@ body {
     position: absolute;
     background-color: #FFD700;
 }
+.header-logo img {
+    width: 200px;
+}
 
 
 /*MAIN*/
-.choose-genre-text {
-    color: white;
-}
-.main-sec-wrapper {
-    width: 80%;
-    margin: 0 auto;
-}
 .main-sec-inner-w {
     display: flex;
+    width: 100%;
 }
 .movie-name {
     margin-top: 10px;
 }
 .see-more-btn {
     color: white;
-    background-color: #FFD700;
+    background-color: red;
+    transition: background-color 0.5s ease;
 }
 
 /*MAIN-GENRE-SECTION*/
@@ -59,29 +57,47 @@ body {
     padding: 10px;
 }
 .genre-wrap {
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
-    background-color: #FFD700;
-    margin-top: 10px;
+    background-color: white;
+    margin-top: 5px;
+    transition: background-color 0.5s ease;
 }
 .genre-wrap:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+.main-genres-text {
+    padding: 10px 0;
+    text-align: center;
+    background-color: white;
+    transition: background-color 0.5s ease;
+}
+.main-genres-text:hover {
     cursor: pointer;
     background-color: lightgray;
 }
 
 /*MAIN-MOVIE-SECTION*/
 .desno-70 {
-    padding: 10px;
+    padding-top: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content:start ;
     flex-wrap: wrap;
 }
+.div-desno-wrapper {
+    width: 100%;
+}
 .movies-section {
-    width: 30%;
+    width: 15%;
     color: white;
     text-align: center;
     margin-top: 10px;
-    border: 5px solid orange;
+    padding-right: 20px;
+    transition: all .2s ease-in-out;
+}
+.movies-section:hover {
+    transform: scale(1.1);
 }
 .see-more-btn {
     width: 30%;
@@ -89,15 +105,21 @@ body {
     padding: 20px;
     color: black;
     text-align: center;
+    font-weight: bold;   
 }
 .see-more-btn:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: #ff3b58;
 }
-.movie-name-p {
+.movie-name-div {
+    position: absolute;
+    color: white;
     background-color: orange;
-    color: black;
-    padding: 15px;
+    width: 100%;
+    top: 0;
+}
+.movie-poster-div {
+    position: relative;
 }
 .movie-poster-div img {
     width: 100%;
@@ -106,4 +128,33 @@ body {
 .main-title {
     color: white;
     margin: 0 auto;
+}
+
+/*CLICKED MOVIE AREA*/
+.clicked-movie-wrapper {
+    display: flex;
+    width: 100%;
+}
+.clicked-movie-30 {
+    width: 30%;
+    text-align: center;
+}
+.clicked-movie-70 {
+    width: 70%;
+    margin-left: 70px;
+}
+.clicked-movie-name-wrap {
+    padding: 5px 0 5px 0;
+}
+.clicked-movie-overview {
+    padding: 5px 0 5px 0;
+}
+.clicked-movie-date {
+    padding: 5px 0 5px 0;
+}
+.clicked-movie-runtime {
+    padding: 5px 0 5px 0;
+}
+.more-info-btn {
+    padding: 5px 0 5px 0;
 }

@@ -4,6 +4,7 @@ function DataLayer() {
     this.genre = {};
     this.movies = {};
     this.searchMovies = {};
+    this.clickedMovies = {};
     
     this.populateGenres = async () => {
         this.genre = await this.persistanceObject.getGenres();
@@ -14,6 +15,9 @@ function DataLayer() {
     this.populateSearchMovies = async (searchTerm) => {
         this.searchMovies = await this.persistanceObject.searchMovies(searchTerm);
     };
+    this.populateClickedMovie = async (clickedMovie) => {
+        this.clickedMoviess = await this.persistanceObject.clickedMovies(clickedMovie);
+    }
 
 
     this.getGenres = () => {
@@ -24,5 +28,8 @@ function DataLayer() {
     };
     this.searchMoviesName = () => {
         return this.searchMovies;
+    };  
+    this.clickedMovies = () => {
+        return this.clickedMoviess;
     }
 }

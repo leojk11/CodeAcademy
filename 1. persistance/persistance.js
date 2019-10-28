@@ -47,4 +47,24 @@ function PersistanceLayer() {
         });
     };
 
+    this.clickedMovies = (clickedMovie) => {
+        console.log(clickedMovie);
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url:"https://api.themoviedb.org/3/movie/" + clickedMovie + "?api_key=f1e238f540ac3104397bc2bbe85794c5&language=en-US",
+                type: "GET",
+                success: function(data){
+                    resolve(data);
+                },
+                error: function(error){
+                    reject(error);
+                }
+            });
+        });
+    };
+
 }
+
+
+
+// https://developers.themoviedb.org/3/movies/get-movie-details
